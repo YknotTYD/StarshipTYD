@@ -13,7 +13,7 @@ style = "#3755ff bold"
 
 [custom.root_char]
 command = 'echo "$"'
-format  = "[$output](bold green)"
+format  = "[$output](bold bright-green)"
 when    = '[ $(sudo -n true 2>/dev/null; echo $?) -ne 0 ]'
 
 [custom.user_char]
@@ -22,7 +22,7 @@ format  = "[$output](bold bright-yellow)"
 when    = '[ $(sudo -n true 2>/dev/null; echo $?) -eq 0 ]'
 
 [character]
-success_symbol = "[> ](bold green)"
+success_symbol = "[> ](bold bright-green)"
 error_symbol   = "[> ](bold red)"
 vicmd_symbol   = "[< ](bold bright-yellow)"
 format = "$symbol(bold)"
@@ -38,7 +38,7 @@ truncation_length = 3
 [git_branch]
 symbol = ""
 format = "[@$branch]($style)"
-style = "bold purple"
+style = "bold bright-purple"
 
 [git_status]
 conflicted = "[X](red bold)"
@@ -56,7 +56,7 @@ up_to_date = ""
 disabled = false
 ignore_submodules = true
 
-format = '[\[](bold purple)[$all_status$ahead_behind]($style)[\]](bold purple)'
+format = '[\[](bold bright-purple)[$all_status$ahead_behind]($style)[\]](bold bright-purple)'
 
 [package]
 format = "[$symbol$version]($style)"
@@ -69,14 +69,14 @@ detect_folders    = []
 
 [username]
 show_always = true
-format = "[$user](cyan bold)[@](green bold)"
+format = "[$user](bright-cyan bold)[@](bright-green bold)"
 
 [hostname]
 ssh_only = false
-format = "[$hostname](green bold)"
+format = "[$hostname](bright-green bold)"
 
 [battery]
 disabled = false
-format = '[\[](green bold)[$percentage]($style)[\]](green bold)'
+format = '[\[](bright-green bold)[$percentage]($style)[\]](bright-green bold)'
 
 #PYTHONANCHOR_REPLACE
