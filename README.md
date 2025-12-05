@@ -23,7 +23,7 @@ A [Starship](https://starship.rs/) prompt configuration.
   - diverged   - '¦${ahead_count}/${behind_count}' (red).
   </pre>
 
-- **Regular Bash Features** - Displays active venv, color-coded username, hostname, directory etc...
+- **Regular Bash features** - Displays active venv, color-coded username, hostname, directory etc...
 
 ## Installation
 
