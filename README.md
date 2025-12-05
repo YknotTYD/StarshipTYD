@@ -29,7 +29,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 
 ## Installation
 
-### Prerequisites
+### Requirements
 
 - [Starship](https://starship.rs/),
 - `python3`,
