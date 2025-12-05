@@ -76,7 +76,6 @@ format = "[$hostname](green bold)"
 
 [battery]
 disabled = false
-format = '[\[](green bold)[$percentage](white)[\]](green bold)'
+format = '[\[](green bold)[$percentage]($style)[\]](green bold)'
 
-[[battery.display]]
-threshold = 100
+#PYTHONANCHOR_REPLACE
