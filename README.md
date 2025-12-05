@@ -2,7 +2,9 @@
 
 A [Starship](https://starship.rs/) prompt configuration.
 
-<video src="docs/demo.webm" controls width="600"></video>
+<video src="docs/demo.webm" controls width="600">
+  Your browser doesn't support video. <a href="docs/demo.webm">Download demo</a>
+</video>
 
 ## Features
 
