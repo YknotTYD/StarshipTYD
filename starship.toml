@@ -18,13 +18,13 @@ when    = '[ $(sudo -n true 2>/dev/null; echo $?) -ne 0 ]'
 
 [custom.user_char]
 command = 'echo "#"'
-format  = "[$output](bold yellow)"
+format  = "[$output](bold bright-yellow)"
 when    = '[ $(sudo -n true 2>/dev/null; echo $?) -eq 0 ]'
 
 [character]
 success_symbol = "[> ](bold green)"
 error_symbol   = "[> ](bold red)"
-vicmd_symbol   = "[< ](bold yellow)"
+vicmd_symbol   = "[< ](bold bright-yellow)"
 format = "$symbol(bold)"
 
 [env_var.VIRTUAL_ENV_PROMPT]
