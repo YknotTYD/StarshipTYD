@@ -1,11 +1,5 @@
 #starship.toml
 
-#check battery and sudo
-#ãdd time (maybe just the minutes)
-#color venv
-#@ and : colors
-#default git_status module character
-
 add_newline = false
 format = "$time${env_var.VIRTUAL_ENV_PROMPT}$username$hostname$battery[:](white)$directory$git_branch$git_status ${custom.root_char}${custom.user_char}$character"
 
@@ -84,3 +78,5 @@ format = "[$hostname](green bold)"
 disabled = false
 format = '[\[](green bold)[$percentage](white)[\]](green bold)'
 
+[[battery.display]]
+threshold = 100
