@@ -2,7 +2,7 @@
 
 A [Starship](https://starship.rs/) prompt configuration.
 
-<video src="https://github.com/user-attachments/assets/7411d040-2761-4914-ba92-b58f187a70f4" controls loop autoplay muted width="600"></video>
+[demo.webm](https://github.com/user-attachments/assets/9c71d2d7-6aef-405e-86ac-9d60d0f01120)
 
 ## Features
 
