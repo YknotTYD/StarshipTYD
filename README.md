@@ -2,6 +2,8 @@
 
 A [Starship](https://starship.rs/) prompt configuration.
 
+<video src="docs/demo.webm" controls width="600"></video>
+
 ## Features
 
 - **Time display** - Shows current time (24h, UTC+1),
