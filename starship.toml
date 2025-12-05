@@ -1,5 +1,6 @@
 #starship.toml
 
+scan_timeout = 300
 add_newline = false
 format = "$time${env_var.VIRTUAL_ENV_PROMPT}$username$hostname$battery[:](white)$directory$git_branch$git_status ${custom.root_char}${custom.user_char}$character"
 
@@ -27,7 +28,7 @@ vicmd_symbol   = "[< ](bold yellow)"
 format = "$symbol(bold)"
 
 [env_var.VIRTUAL_ENV_PROMPT]
-format = '(\($env_value\) )'
+format = '($env_value)'
 
 [directory]
 style = "bold #707eff"

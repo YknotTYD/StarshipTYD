@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#starship_toml_gen.py
 
 """
 Made to be used by install_starship_config.sh.
