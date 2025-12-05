@@ -32,7 +32,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 
 - [Starship](https://starship.rs/),
 - `python3`,
-- A `starship`-compatible shell.
+- A `starship`-enabled shell (see [starship installation guide](https://github.com/starship/starship#user-content--installation)).
 
 ### Quick Install
 
