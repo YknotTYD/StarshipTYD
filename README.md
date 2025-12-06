@@ -6,7 +6,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 ## Features
 
 - **Time display** - Shows current time (24h, UTC+1),
-- **Battery indicator** - With red-to-green gradient,
+- **Battery indicator** - With yellow-to-green gradient,
 - **Sudo session detection** - Based on cached sudo credentials,
   - `$` (green) - No active sudo session,
   - `#` (yellow) - Sudo credentials cached.
