@@ -3,10 +3,15 @@
 
 set -eu
 
-#check to add eval thing to bashrc
+BASHRC="$HOME/.bashrc"
+touch "$BASHRC"
 
-if ! command -v starship; then
+if ! command -v starship > /dev/null; then
 	curl -sS https://starship.rs/install.sh | sh -s -- --version v1.24.1
+fi
+
+if ! grep -q "starship init bash" "$BASHRC"; then
+	echo 'eval "$(starship init bash)"' >> "$BASHRC"
 fi
 
 TEMP_DIR=$(mktemp -d)
