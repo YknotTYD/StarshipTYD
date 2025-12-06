@@ -31,7 +31,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 ### Quick Install (installs starship v1.24.1 if necessary)
 
 #### Requirements
-- `python3`,
+- `python3`.
 
 ```bash
 curl https://raw.githubusercontent.com/YknotTYD/StarshipConfig/curl.sh | sh
