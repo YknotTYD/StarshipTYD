@@ -37,7 +37,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 ### Quick Install
 
 ```bash
-git clone git@github.com:YknotTYD/StarshipConfig.git
+git clone https://github.com/YknotTYD/StarshipConfig.git
 cd StarshipConfig
 sh starship-config-install.sh
 ```
