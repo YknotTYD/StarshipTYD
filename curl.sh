@@ -16,6 +16,7 @@ if ! command -v starship > /dev/null; then
 fi
 
 if ! grep -q "starship init bash" "$BASHRC"; then
+	echo '' >> "$BASHRC"
 	echo 'eval "$(starship init bash)"' >> "$BASHRC"
 fi
 

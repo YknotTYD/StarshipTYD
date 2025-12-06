@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-#sudo_cache_worker.sh
+#sudo-cache-worker.sh
 
 SUDO_CACHE_FILE="/tmp/sudo_cache_${USER}_$$"
 

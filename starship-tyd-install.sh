@@ -8,6 +8,9 @@ fi
 
 set -eu
 
+BASHRC="$HOME/.bashrc"
+touch "$BASHRC"
+
 CONF="$HOME/.config/starship.toml"
 CONF_BACKUP="$HOME/.config/.starship.toml.backup"
 
@@ -18,3 +21,10 @@ if [ -f "$CONF" ]; then
 fi
 
 python3 ./starship_toml_gen.py > "$CONF"
+
+cp "./sudo-cache-worker.sh" "$HOME/sudo-cache-worker.sh"
+
+if ! grep -q 'source "$HOME/sudo-cache-worker.sh"' "$BASHRC"; then
+	echo '' >> "$BASHRC"
+	echo 'source "$HOME/sudo-cache-worker.sh"' >> "$BASHRC"
+fi
