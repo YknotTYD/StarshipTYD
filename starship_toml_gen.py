@@ -5,7 +5,7 @@ import sys
 from typing import TextIO, Tuple
 
 """
-Made to be used by install_starship_config.sh.
+Made to be used by starship-tyd-install.sh.
 """
 
 Color = Tuple[int, int, int]
