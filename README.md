@@ -42,6 +42,12 @@ cd StarshipConfig
 sh starship-config-install.sh
 ```
 
+### Quicker Install (installs starship, only require python3)
+
+```bash
+curl https://raw.githubusercontent.com/YknotTYD/StarshipConfig/curl.sh | sh
+```
+
 ### Manual Install
 
 ```bash
