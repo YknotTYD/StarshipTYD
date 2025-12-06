@@ -28,25 +28,28 @@ A [Starship](https://starship.rs/) prompt configuration.
 
 ## Installation
 
-### Requirements
+### Quick Install (installs starship v1.24.1 if necessary)
+
+#### Requirements
+- `python3`,
+
+```bash
+curl https://raw.githubusercontent.com/YknotTYD/StarshipConfig/curl.sh | sh
+```
+
+### Install
+
+#### Requirements
 
 - [Starship](https://starship.rs/),
 - `python3`,
 - A `starship`-enabled shell (see [starship installation guide](https://github.com/starship/starship#user-content--installation)).
 
-### Quick Install
-
 ```bash
 git clone https://github.com/YknotTYD/StarshipConfig.git
 cd StarshipConfig
 sh starship-config-install.sh
-```
-
-### Quicker Install (installs starship v1.24.1, only require python3)
-
-```bash
-curl https://raw.githubusercontent.com/YknotTYD/StarshipConfig/curl.sh | sh
-```
+``
 
 ### Manual Install
 
