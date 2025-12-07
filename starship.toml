@@ -2,7 +2,7 @@
 
 scan_timeout = 300
 add_newline = false
-format = "$time${env_var.VIRTUAL_ENV_PROMPT}$username$hostname$battery[:](white)$directory$git_branch$git_status ${custom.root_char}${custom.user_char}$character"
+format = "$time${env_var.VIRTUAL_ENV_PROMPT}$username$hostname$battery[:](white)$directory$git_branch$git_status ${custom.sudo_char}$character"
 
 [time]
 utc_time_offset="1"
@@ -11,15 +11,10 @@ time_format = "%H%M"
 format = "[$time]($style)[:](white)"
 style = "bold #707eff"
 
-[custom.root_char]
-command = 'echo "$"'
-format  = "[$output](bold bright-green)"
-when    = '[ cat $SUDO_CACHE_FILE -ne 0 ]'
-
-[custom.user_char]
-command = 'echo "#"'
-format  = "[$output](bold bright-yellow)"
-when    = '[ cat $SUDO_CACHE_FILE -eq 0 ]'
+[custom.sudo_char]
+command = 'if [ "$(cat "$SUDO_CACHE_FILE" 2>/dev/null)" = "1" ]; then echo -e "\x1b[38;2;255;255;0m#"; else echo -e "\x1b[38;2;0;255;0m$"; fi;'
+format  = "[$output](white)"
+when    = 'true'
 
 [character]
 success_symbol = "[> ](bold bright-green)"

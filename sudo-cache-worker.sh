@@ -2,6 +2,7 @@
 #sudo-cache-worker.sh
 
 SUDO_CACHE_FILE="/tmp/sudo_cache_${USER}_$$"
+export SUDO_CACHE_FILE
 
 _launch_cache_worker() {
     while true; do
@@ -16,4 +17,4 @@ _launch_cache_worker() {
 
 _launch_cache_worker &
 SUDO_CACHE_WORKER_PID=$!
-trap "kill $SUDO_CACHE_WORKER_PID 2>/dev/null; [ -f $SUDO_CACHE_FILE ] && rm $SUDO_CACHE_FILE" EXIT
+trap "kill $SUDO_CACHE_WORKER_PID 2>/dev/null; [ -f \"$SUDO_CACHE_FILE\" ] && rm \"$SUDO_CACHE_FILE\"" EXIT
