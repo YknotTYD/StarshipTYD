@@ -28,7 +28,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 
 ## Installation
 
-### Quick Install
+### Quick Install (Recommended)
 
 #### Requirements
 - `python3`,
