@@ -12,6 +12,8 @@ fi
 
 set -eu
 
+SRC_DIR="$(cd -- "$(dirname "$0")" && pwd)"
+
 BASHRC="$HOME/.bashrc"
 touch "$BASHRC"
 
@@ -24,11 +26,11 @@ if [ -f "$CONF" ]; then                           #
     cp "$CONF" "$CONF_BACKUP"                     #
 fi                                                #
 
-python3 ./starship_toml_gen.py > "$CONF" # install the starship config
+python3 "$SRC_DIR/starship_toml_gen.py" "$SRC_DIR/starship.toml" > "$CONF" # install the starship config
 
-cp "./sudo-cache-worker.sh" "$HOME/.sudo-cache-worker.sh" # install the sudo cache worker
-LAUNCH_SUDO_WORKER='source "$HOME/.sudo-cache-worker.sh"' #
-                                                          #
-if ! grep -q "$LAUNCH_SUDO_WORKER" "$BASHRC"; then        #
-	printf '\n%s\n' "$LAUNCH_SUDO_WORKER" >> "$BASHRC"    #
-fi                                                        #
+cp "$SRC_DIR/sudo-cache-worker.sh" "$HOME/.sudo-cache-worker.sh" # install the sudo cache worker
+LAUNCH_SUDO_WORKER='source "$HOME/.sudo-cache-worker.sh"'        #
+                                                                 #
+if ! grep -q "$LAUNCH_SUDO_WORKER" "$BASHRC"; then               #
+	printf '\n%s\n' "$LAUNCH_SUDO_WORKER" >> "$BASHRC"           #
+fi                                                               #

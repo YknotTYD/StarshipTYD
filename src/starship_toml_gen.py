@@ -8,6 +8,13 @@ from typing import TextIO, Tuple
 Made to be used by starship-tyd-install.sh.
 """
 
+if len(sys.argv) != 2:
+    if len(sys.argv) == 1:
+        sys.stderr.write("starship_toml_gen.py: no file path given.\n")
+    else:
+        sys.stderr.write("starship_toml_gen.py: takes exactly one argument.\n")
+    exit(1)
+
 Color = Tuple[int, int, int]
 GRADIENT_SCALING: float = 0.85
 GRADIENT: Tuple[Color, Color] = (
@@ -21,7 +28,7 @@ threshold = {}
 style = "bold {}"
 """
 
-def output_starship_toml(filepath: str = "starship.toml", out: TextIO = sys.stdout) -> None:
+def output_starship_toml(filepath: str = sys.argv[1], out: TextIO = sys.stdout) -> None:
 
     """
     **`output_starship_toml`**
