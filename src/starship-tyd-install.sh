@@ -6,8 +6,8 @@
 # installs the sudo cache worker
 
 if [ -z "$HOME" ]; then
-	echo '$HOME is unset.' 1>&2
-	exit 1
+    echo '$HOME is unset.' 1>&2
+    exit 1
 fi
 
 set -eu
@@ -32,5 +32,5 @@ cp "$SRC_DIR/sudo-cache-worker.sh" "$HOME/.sudo-cache-worker.sh" # install the s
 LAUNCH_SUDO_WORKER='source "$HOME/.sudo-cache-worker.sh"'        #
                                                                  #
 if ! grep -q "$LAUNCH_SUDO_WORKER" "$BASHRC"; then               #
-	printf '\n%s\n' "$LAUNCH_SUDO_WORKER" >> "$BASHRC"           #
+    printf '\n%s\n' "$LAUNCH_SUDO_WORKER" >> "$BASHRC"           #
 fi                                                               #

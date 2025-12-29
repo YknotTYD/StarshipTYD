@@ -48,7 +48,7 @@ curl -sSLf https://raw.githubusercontent.com/YknotTYD/StarshipTYD/main/src/curl.
 ```bash
 git clone https://github.com/YknotTYD/StarshipTYD.git
 cd StarshipTYD
-sh starship-tyd-install.sh
+sh src/starship-tyd-install.sh
 ```
 
 ### Notes

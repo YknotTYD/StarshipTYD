@@ -7,8 +7,8 @@
 # launches starship-tyd-install.sh
 
 if [ -z "$HOME" ]; then
-	echo "\$HOME is unset." 1>&2
-	exit 1
+    echo "\$HOME is unset." 1>&2
+    exit 1
 fi
 
 set -eu
@@ -18,20 +18,20 @@ touch "$BASHRC"
 
 if ! command -v starship > /dev/null 2>&1; then # starship: command not found
 
-	mkdir -p "$HOME/.local/bin"                 # add ~/.local/bin to PATH
-	SETPATH='PATH="$HOME/.local/bin:$PATH"'     #
+    mkdir -p "$HOME/.local/bin"                 # add ~/.local/bin to PATH
+    SETPATH='PATH="$HOME/.local/bin:$PATH"'     #
                                                 #
-	if ! grep -q "$SETPATH" "$BASHRC"; then     #
-		printf '\n%s\n' "$SETPATH" >> "$BASHRC" #
-	fi                                          #
+    if ! grep -q "$SETPATH" "$BASHRC"; then     #
+        printf '\n%s\n' "$SETPATH" >> "$BASHRC" #
+    fi                                          #
 
-	curl -sSLf https://starship.rs/install.sh | sh -s -- --version v1.24.1 --bin-dir "$HOME/.local/bin" # install starship
+    curl -sSLf https://starship.rs/install.sh | sh -s -- --version v1.24.1 --bin-dir "$HOME/.local/bin" # install starship
 fi
 
 STARSHIP_INIT='eval "$(starship init bash)"'              # add starship to ~/.bashrc
                                                           #
 if ! grep -q "$STARSHIP_INIT" "$BASHRC" 2>/dev/null; then #
-	printf '\n%s\n' "$STARSHIP_INIT" >> "$BASHRC"         #
+    printf '\n%s\n' "$STARSHIP_INIT" >> "$BASHRC"         #
 fi
 
 TEMP_DIR=$(mktemp -d)          # create a temporary
